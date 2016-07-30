@@ -8,6 +8,7 @@ use pocketmine\Plugin;
 use pocketmine\Server;
 use pocketmine\Player;
 use pocketmine\utils\Config;
+use onebone\economyapi\EconomyAPI;
 
 Class Task extends PluginTask{
 
@@ -15,6 +16,7 @@ Class Task extends PluginTask{
     {
         $this->plugin = $plugin;
         parent::__construct($plugin);
+        $this->money = EconomyAPI::getInstance();
     }
 public function onRun($currentTick)
 {
