@@ -7,3 +7,4 @@
 ###{Y} shows players y coords
 ###{Z} shows players z coords
 ###{WORLD} shows world name
+###{NEXTLINE} switches to the line under
