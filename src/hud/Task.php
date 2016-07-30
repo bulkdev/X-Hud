@@ -36,9 +36,10 @@ public function onRun($currentTick)
            $f = str_replace("{NEXTLINE}","\n",$fa);
             if($this->money){
            $fu = str_replace("{MONEY}",$this->money->myMoney($p),$f);
-            }
         $p->sendTip($fu);
-
+          }else{
+          $p->sendTip($f);
+}
        }
         }
 
