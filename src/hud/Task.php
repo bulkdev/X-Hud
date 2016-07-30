@@ -20,7 +20,7 @@ Class Task extends PluginTask{
         parent::__construct($plugin);
        $economy = $this->getOwner()->getServer()->getPluginManager()->getPlugin("EconomyAPI");
         if($economy){
-        $this->money = \onebone\economyapi\EconomyAPI::getInstance();
+        $this->money = $economy;
        $this->getOwner()->getLogger()->info("[X-Hud]EconomyS has been detected variable {MONEY} activated");
      }else{
        $this->getOwner()->getLogger()->info("[X-Hud]EconomyS has NOT been detected variable {MONEY} deactivated");
