@@ -11,7 +11,7 @@ use pocketmine\utils\Config;
 
 Class Task extends PluginTask{
 
-    public $economy;
+    public $money;
 
 
     public function __construct($plugin)
