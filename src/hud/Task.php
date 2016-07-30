@@ -18,7 +18,7 @@ Class Task extends PluginTask{
     {
         $this->plugin = $plugin;
         parent::__construct($plugin);
-       $economy = $this->getOwner()->getServer()->getPluginManager()->getPlugin("EconomyAPI");
+       $economy = $this->plugin->getServer()->getPluginManager()->getPlugin("EconomyAPI");
         if($economy){
         $this->money = $economy;
        $this->getOwner()->getLogger()->info("[X-Hud]EconomyS has been detected variable {MONEY} activated");
