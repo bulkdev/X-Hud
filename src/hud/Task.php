@@ -16,7 +16,7 @@ Class Task extends PluginTask{
         $this->plugin = $plugin;
         parent::__construct($plugin);
         $this->getServer()->getPluginManage()->getPlugin("EconomyAPI");
-        $this->money = \onebone\economyapi\EconomyAPI::getInstance ();
+        $this->money = \onebone\economyapi\EconomyAPI::getInstance();
     }
 public function onRun($currentTick)
 {
