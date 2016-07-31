@@ -18,8 +18,7 @@ Class Task extends PluginTask{
     {
         $this->plugin = $plugin;
         parent::__construct($plugin);
-       $economy = $this->plugin->getServer()->getPluginManager()->getPlugin("EconomyAPI");
-        if($economy){
+       if($this->plugin->getServer()->getPluginManager()->getPlugin("EconomyAPI" )!= null){
         $this->money = \onebone\economyapi\EconomyAPI::getInstance();
        $this->getOwner()->getLogger()->info("[X-Hud]EconomyS has been detected variable {MONEY} activated");
      }else{
@@ -37,7 +36,7 @@ public function onRun($currentTick)
            $fag = str_replace("{NAME}",$p->getName(),$fagg);
            $fa = str_replace("{WORLD}",$p->getLevel()->getName(),$fag);
            $f = str_replace("{NEXTLINE}","\n",$fa);
-            if($economy){
+            if($this->plugin->getServer()->getPluginManager()->getPlugin("EconomyAPI") != null){
            $fu = str_replace("{MONEY}",$this->money->myMoney($p),$f);
         $p->sendTip($fu);
           }else{
