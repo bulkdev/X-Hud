@@ -38,9 +38,9 @@ public function onRun($currentTick)
            $f = str_replace("{NEXTLINE}","\n",$fa);
             if($this->plugin->getServer()->getPluginManager()->getPlugin("EconomyAPI") != null){
            $fu = str_replace("{MONEY}",$this->money->myMoney($p),$f);
-        $p->sendTip($fu);
+        $p->sendPopup($fu);
           }else{
-          $p->sendTip($f);
+          $p->sendPopup($f);
 }
        }
         }
